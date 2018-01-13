@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://i.imgur.com/TnZMZGF.png">
 <meta property="og:image" content="https://i.imgur.com/4MnQh3P.png">
 <meta property="og:image" content="https://i.imgur.com/EmqQXQs.jpg">
-<meta property="og:updated_time" content="2018-01-09T13:33:46.706Z">
+<meta property="og:updated_time" content="2018-01-13T10:25:29.599Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github搭建属于自己的博客">
 <meta name="twitter:description" content="一、搭建博客1)&amp;emsp;下载并安装适用于自己操作系统的Node.js，安装完成后在命令行下输入   12node -vnpm -v &amp;emsp;&amp;emsp;如果结果如下图所示，则说明安装正确，可以进行下一步了，否则则需要回头检查自己的安装过程。">
@@ -219,7 +219,11 @@
 <p>3)&emsp;打开站点根目录下的站点配置文件<code>_config.yml</code>，将<code>theme</code>后面的内容改为主题名称，如图：<br><img src="https://i.imgur.com/4MnQh3P.png" alt=""><br>&emsp;&emsp;关于<strong>yilia</strong>主题的配置及各种功能的添加，大家可以参考博主“枫之木落”的<a href="http://www.lookk.cn" target="_blank" rel="noopener">文章</a>。</p>
 <p>4)&emsp;打开Gitbash，输入命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\hexo</span><br><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure></p>
 <p>5)&emsp;浏览器内输入<strong><a href="https://你的Github用户名.github.io" target="_blank" rel="noopener">https://你的Github用户名.github.io</a></strong>，<strong>Enter</strong>→→</p>
-<h2 id="三、使用Markdown开始你的创作"><a href="#三、使用Markdown开始你的创作" class="headerlink" title="三、使用Markdown开始你的创作"></a>三、使用Markdown开始你的创作</h2><p><img src="https://i.imgur.com/EmqQXQs.jpg" alt=""><br>&emsp;(<a href="https://yhklsdf666.github.io/2018/01/07/Markdown初体验/" target="_blank" rel="noopener">未完待续</a>)</p>
+<h2 id="三、功能完善"><a href="#三、功能完善" class="headerlink" title="三、功能完善"></a>三、功能完善</h2><p>1)&emsp;<a href="http://blog.csdn.net/destinytaoer/article/details/78400021" target="_blank" rel="noopener">添加友言评论功能</a></p>
+<p>2)&emsp;网站信息设置：<br>&emsp;&emsp;打开hexo站点配置文件<code>_config.yml</code><br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">title:</span> Welcome to the <span class="keyword">new</span> world		(网站标题)</span><br><span class="line"><span class="string">subtitle:</span> 相由心生，境随心转。		(网站副标题)</span><br><span class="line"><span class="string">description:</span> 						(网站描述)</span><br><span class="line"><span class="string">author:</span> Belief&amp;Love					(你的名字)</span><br><span class="line"><span class="string">language:</span></span><br><span class="line"><span class="string">timezone:</span></span><br></pre></td></tr></table></figure></p>
+<p>3)&emsp;代码高亮：<br>&emsp;&emsp;打开hexo站点配置文件<code>_config.yml</code><br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">highlight:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  line_number:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  auto_detect:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  tab_replace:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>&emsp;OVER!</p>
+<h2 id="四、使用Markdown开始你的创作"><a href="#四、使用Markdown开始你的创作" class="headerlink" title="四、使用Markdown开始你的创作"></a>四、使用Markdown开始你的创作</h2><p><img src="https://i.imgur.com/EmqQXQs.jpg" alt=""><br>&emsp;(<a href="https://yhklsdf666.github.io/2018/01/07/Markdown初体验/" target="_blank" rel="noopener">未完待续</a>)</p>
 
       
 
@@ -323,6 +327,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/01/13/表情包/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          表情包
+        
+      </div>
+    </a>
   
   
     <a href="/2018/01/07/Markdown初体验/" id="article-nav-older" class="article-nav-link-wrap">
@@ -467,6 +480,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">表情包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">18岁</a>
               </li>
             
             <div class="clearfix"></div>

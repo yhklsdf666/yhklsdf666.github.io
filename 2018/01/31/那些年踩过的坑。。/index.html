@@ -8,22 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>那些年踩过的坑。。 | Welcome to the new world</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、百度网盘显示网络连接异常   A:检查防火墙和杀软 2、Vmware下centos7网络配置">
+  <meta name="description" content="1、&amp;emsp;   百度网盘显示网络连接异常:&amp;emsp;&amp;emsp;检查防火墙和杀软 2、&amp;emsp;Vmware下centos7网络配置">
 <meta name="keywords" content="恍然大悟系列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="那些年踩过的坑。。">
 <meta property="og:url" content="http://yoursite.com/2018/01/31/那些年踩过的坑。。/index.html">
 <meta property="og:site_name" content="Welcome to the new world">
-<meta property="og:description" content="1、百度网盘显示网络连接异常   A:检查防火墙和杀软 2、Vmware下centos7网络配置">
+<meta property="og:description" content="1、&amp;emsp;   百度网盘显示网络连接异常:&amp;emsp;&amp;emsp;检查防火墙和杀软 2、&amp;emsp;Vmware下centos7网络配置">
 <meta property="og:image" content="https://i.imgur.com/o3wRkjv.png">
 <meta property="og:image" content="https://i.imgur.com/AvjScbS.png">
 <meta property="og:image" content="https://i.imgur.com/lV6Dgbo.png">
 <meta property="og:image" content="https://i.imgur.com/Ui5bLg1.png">
 <meta property="og:image" content="https://i.imgur.com/rQTyILy.png">
-<meta property="og:updated_time" content="2018-01-31T13:46:15.041Z">
+<meta property="og:updated_time" content="2018-01-31T14:01:41.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="那些年踩过的坑。。">
-<meta name="twitter:description" content="1、百度网盘显示网络连接异常   A:检查防火墙和杀软 2、Vmware下centos7网络配置">
+<meta name="twitter:description" content="1、&amp;emsp;   百度网盘显示网络连接异常:&amp;emsp;&amp;emsp;检查防火墙和杀软 2、&amp;emsp;Vmware下centos7网络配置">
 <meta name="twitter:image" content="https://i.imgur.com/o3wRkjv.png">
   
     <link rel="alternative" href="/atom.xml" title="Welcome to the new world" type="application/atom+xml">
@@ -185,25 +185,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1、百度网盘显示网络连接异常<br>   A:检查防火墙和杀软</p>
-<p>2、Vmware下centos7网络配置<br><a id="more"></a>    </p>
-<ul>
-<li>打开VMware，依次click<code>编辑</code>，<code>虚拟网络编辑器</code>，<code>NAT模式</code>，<code>NAT设置</code>，用纸笔，记下<strong>子网IP</strong>，<strong>子网掩码</strong>，<strong>网关IP</strong>。<img src="https://i.imgur.com/o3wRkjv.png" alt=""></li>
-<li>命令行下键入<code>ipconfig/all</code>命令查看主机所连网络的<strong>DNS服务器及MAC(物理)地址</strong>，同样用纸笔记录下来。</li>
-<li><p>打开终端，root用户下键入<code>vi /etc/sysconfig/network-scripts/ifcfg-ens33</code>，</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ONBOOT</span>=<span class="literal">yes</span>					//将最后这里改为<span class="literal">yes</span>并在其后添加配置：</span><br><span class="line"><span class="attr">HWADDR</span>=<span class="number">00</span>:<span class="number">0</span>c:<span class="number">29</span>:<span class="number">91</span>:d7:<span class="number">00</span>		(MAC地址)</span><br><span class="line"><span class="attr">NETMASK</span>=<span class="number">255.255</span>.<span class="number">255.0</span>		(子网掩码)</span><br><span class="line"><span class="attr">NETWORK</span>=<span class="number">192.168</span>.<span class="number">49.0</span>			(子网IP)</span><br><span class="line"><span class="attr">GATEWAY</span>=<span class="number">192.168</span>.<span class="number">49.2</span>			(网关IP)</span><br><span class="line"><span class="attr">IPADDR</span>=<span class="number">192.168</span>.<span class="number">49.128</span>		(IP地址，前三段与网关相同，第四段写<span class="number">128</span>即可)</span><br><span class="line"><span class="attr">DNS1</span>=<span class="number">192.168</span>.<span class="number">43.1</span>			(DNS服务器)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入<code>Esc</code>，<code>:x</code>(保存并退出)</p>
-</li>
-<li>终端下键入命令<code>service network restart</code></li>
-<li>3、Cenos更换中文输入法<br> 依次click<code>设置</code>，<code>区域和语言</code>，<code>左下方的小+号</code>，在弹出的列表里面选择<code>汉语(中国)</code>，<code>汉语(Intelligent Pinyin)</code>，添加。<img src="https://i.imgur.com/AvjScbS.png" alt="">如图选择<code>汉语(Intelligent Pinyin)</code>启用输入法，按<code>shift</code>键可以进行中英文切换。</li>
-</ul>
-<p>4、github源码安装软件<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">URL</span></span><br><span class="line">chmod +x configure</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></p>
-<p>5、dosbox下link不能生成obj文件，vim，notepad++出现如下情况，<strong>禁用以管理员身份运行此程序</strong>即可<br><img src="https://i.imgur.com/lV6Dgbo.png" alt=""><br><img src="https://i.imgur.com/Ui5bLg1.png" alt=""></p>
-<p>6、电脑wifi模块不见了？不要慌，如图，打开设备管理器<br><img src="https://i.imgur.com/rQTyILy.png" alt=""><br>click<code>网络适配器</code>，发现有问题的适配器，先试着重启，若是不行重新下载驱动即可。</p>
-<p>7、Kali Linux可以通过<code>xrandr</code>命令强制修改分辨率，具体操作请移步<a href="https://www.baidu.com/" target="_blank" rel="noopener">◎◎◎</a>     </p>
-<p>8、vim配置<a href="http://geek.csdn.net/news/detail/34295" target="_blank" rel="noopener">http://geek.csdn.net/news/detail/34295</a><br>      <a href="https://www.cnblogs.com/highway-9/p/5984285.html" target="_blank" rel="noopener">https://www.cnblogs.com/highway-9/p/5984285.html</a></p>
-<p>9、yum提示<code>Another app is currently holding the yum lock; waiting for it to exit...</code><br>执行命令:<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">rm</span> -f /<span class="keyword">var</span>/<span class="keyword">run</span>/yum.pid</span><br></pre></td></tr></table></figure></p>
+        <p>1、&emsp;   百度网盘显示网络连接异常:<br>&emsp;&emsp;检查防火墙和杀软</p>
+<p>2、&emsp;Vmware下centos7网络配置<br><a id="more"></a><br>&emsp;&emsp;打开VMware，依次click<code>编辑</code>，<code>虚拟网络编辑器</code>，<code>NAT模式</code>，<code>NAT设置</code>，用纸笔，记下<strong>子网IP</strong>，<strong>子网掩码</strong>，<strong>网关IP</strong>。<img src="https://i.imgur.com/o3wRkjv.png" alt=""><br>&emsp;&emsp;命令行下键入<code>ipconfig/all</code>命令查看主机所连网络的<strong>DNS服务器及MAC(物理)地址</strong>，同样用纸笔记录下来。<br>&emsp;&emsp;打开终端，root用户下键入<code>vi /etc/sysconfig/network-scripts/ifcfg-ens33</code>，<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ONBOOT</span>=<span class="literal">yes</span>					//将最后这里改为<span class="literal">yes</span>并在其后添加配置：</span><br><span class="line"><span class="attr">HWADDR</span>=<span class="number">00</span>:<span class="number">0</span>c:<span class="number">29</span>:<span class="number">91</span>:d7:<span class="number">00</span>		(MAC地址)</span><br><span class="line"><span class="attr">NETMASK</span>=<span class="number">255.255</span>.<span class="number">255.0</span>		(子网掩码)</span><br><span class="line"><span class="attr">NETWORK</span>=<span class="number">192.168</span>.<span class="number">49.0</span>			(子网IP)</span><br><span class="line"><span class="attr">GATEWAY</span>=<span class="number">192.168</span>.<span class="number">49.2</span>			(网关IP)</span><br><span class="line"><span class="attr">IPADDR</span>=<span class="number">192.168</span>.<span class="number">49.128</span>		(IP地址，前三段与网关相同，第四段写<span class="number">128</span>即可)</span><br><span class="line"><span class="attr">DNS1</span>=<span class="number">192.168</span>.<span class="number">43.1</span>			(DNS服务器)</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;输入<code>Esc</code>，<code>:x</code>(保存并退出)<br>&emsp;&emsp;终端下键入命令<code>service network restart</code></p>
+<p>3、&emsp;Cenos更换中文输入法<br>&emsp;&emsp;依次click<code>设置</code>，<code>区域和语言</code>，<code>左下方的小+号</code>，在弹出的列表里面选择<code>汉语(中国)</code>，<code>汉语(Intelligent Pinyin)</code>，添加。<br><img src="https://i.imgur.com/AvjScbS.png" alt=""><br>&emsp;&emsp;如图选择<code>汉语(Intelligent Pinyin)</code>启用输入法，按<code>shift</code>键可以进行中英文切换。</p>
+<p>4、&emsp;github源码安装软件<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">URL</span></span><br><span class="line">chmod +x configure</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure></p>
+<p>5、&emsp;dosbox下link不能生成obj文件，vim，notepad++出现如下情况，<strong>禁用以管理员身份运行此程序</strong>即可<br><img src="https://i.imgur.com/lV6Dgbo.png" alt=""><br><img src="https://i.imgur.com/Ui5bLg1.png" alt=""></p>
+<p>6、&emsp;电脑wifi模块不见了？不要慌，如图，打开设备管理器<br><img src="https://i.imgur.com/rQTyILy.png" alt=""><br>&emsp;&emsp;click<code>网络适配器</code>，发现有问题的适配器，先试着重启，若是不行重新下载驱动即可。</p>
+<p>7、&emsp;Kali Linux可以通过<code>xrandr</code>命令强制永久修改分辨率，具体操作请移步<a href="https://www.baidu.com/" target="_blank" rel="noopener">◎◎◎</a>     </p>
+<p>8、&emsp;vim终极配置<a href="http://geek.csdn.net/news/detail/34295" target="_blank" rel="noopener">①</a>    <a href="https://www.cnblogs.com/highway-9/p/5984285.html" target="_blank" rel="noopener">②</a></p>
+<p>9、&emsp;yum提示<code>Another app is currently holding the yum lock; waiting for it to exit...</code><br>&emsp;&emsp;执行命令:<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">rm</span> -f /<span class="keyword">var</span>/<span class="keyword">run</span>/yum.pid</span><br></pre></td></tr></table></figure></p>
 
       
 

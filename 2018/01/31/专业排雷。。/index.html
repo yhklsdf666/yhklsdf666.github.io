@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://i.imgur.com/rQTyILy.png">
 <meta property="og:image" content="https://i.imgur.com/4X1Igf2.png">
 <meta property="og:image" content="https://i.imgur.com/I8sYjHP.png">
-<meta property="og:updated_time" content="2018-07-30T03:42:25.703Z">
+<meta property="og:updated_time" content="2018-07-30T17:11:34.039Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="专业排雷。。">
 <meta name="twitter:image" content="https://i.imgur.com/kGKY4ld.png">
@@ -209,7 +209,7 @@
 <pre><code>1. 用数据线直接连接到电脑
 2. 用电脑将文佳夹上传至腾讯微云或者百度网盘，再用手机下载下来
 3. 将文件夹制作成压缩文件用QQ/TIM发送至手机
-</code></pre><p>15）github如何添加第n(n &gt; 1)个ssh key<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   ssh-keygen -t rsa -C <span class="string">"你的邮箱"</span> -f ~/.ssh/calculator(备注：此处calculator为我在本地ssh密钥的名字)</span><br><span class="line"></span><br><span class="line">ssh-agent bash</span><br><span class="line"></span><br><span class="line">ssh-<span class="keyword">add</span><span class="bash"> ~/.ssh/calculator</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">ssh-add -l</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">附：可以通过ssh-add -D来清空私钥</span></span><br></pre></td></tr></table></figure></p>
+</code></pre><p>15）github如何添加第n(n &gt; 1)个ssh key<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">   ssh-keygen -t rsa -C <span class="string">"你的邮箱"</span> -f ~/.ssh/calculator(备注：此处calculator为我在本地ssh密钥的名字)</span><br><span class="line">   </span><br><span class="line">true[ 编辑.shh文件夹下的config文件，没有的话创建一个]</span><br><span class="line">true[ Host github.calculator(第一个小数点前不用改)</span><br><span class="line">true  HostName https://github.com/yhklsdf666/calculator.git(git仓库地址)</span><br><span class="line">true  <span class="keyword">User</span> git(不用改)</span><br><span class="line">true  IdentityFile ~/.ssh/calculator](第一个反斜杠前不用改)</span><br><span class="line"></span><br><span class="line">ssh-agent bash</span><br><span class="line"></span><br><span class="line">ssh-<span class="keyword">add</span><span class="bash"> ~/.ssh/calculator</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">ssh-add -l</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">附：可以通过ssh-add -D来清空私钥</span></span><br></pre></td></tr></table></figure></p>
 
       
 

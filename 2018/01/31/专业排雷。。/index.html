@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://i.imgur.com/rQTyILy.png">
 <meta property="og:image" content="https://i.imgur.com/4X1Igf2.png">
 <meta property="og:image" content="https://i.imgur.com/I8sYjHP.png">
-<meta property="og:updated_time" content="2018-08-07T12:26:59.912Z">
+<meta property="og:updated_time" content="2018-08-17T07:23:53.633Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="专业排雷。。">
 <meta name="twitter:image" content="https://i.imgur.com/kGKY4ld.png">
@@ -191,32 +191,33 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="https://i.imgur.com/kGKY4ld.png" alt=""><br><a id="more"></a> </p>
-<ol>
-<li><p>百度网盘显示网络连接异常:</p>
+<ul>
+<li>百度网盘显示网络连接异常:</li>
+</ul>
 <p>检查防火墙和杀软</p>
-</li>
-<li><p>Vmware下centos7网络配置   </p>
+<ul>
+<li>Vmware下centos7网络配置   </li>
+</ul>
 <p>打开VMware，依次click<code>编辑</code>，<code>虚拟网络编辑器</code>，<code>NAT模式</code>，<code>NAT设置</code>，用纸笔，记下<strong>子网IP</strong>，<strong>子网掩码</strong>，<strong>网关IP</strong>。<img src="https://i.imgur.com/o3wRkjv.png" alt=""><br>命令行下键入<code>ipconfig/all</code>命令查看主机所连网络的<strong>DNS服务器及MAC(物理)地址</strong>，同样用纸笔记录下来。<br>打开Linux终端，root用户下键入<code>vi /etc/sysconfig/network-scripts/ifcfg-ens33</code>，</p>
-</li>
-</ol>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ONBOOT</span>=<span class="literal">yes</span>					//将最后这里改为<span class="literal">yes</span>并在其后添加配置：</span><br><span class="line"><span class="attr">HWADDR</span>=<span class="number">00</span>:<span class="number">0</span>c:<span class="number">29</span>:<span class="number">91</span>:d7:<span class="number">00</span>		(MAC地址)</span><br><span class="line"><span class="attr">NETMASK</span>=<span class="number">255.255</span>.<span class="number">255.0</span>		(子网掩码)</span><br><span class="line"><span class="attr">NETWORK</span>=<span class="number">192.168</span>.<span class="number">49.0</span>			(子网IP)</span><br><span class="line"><span class="attr">GATEWAY</span>=<span class="number">192.168</span>.<span class="number">49.2</span>			(网关IP)</span><br><span class="line"><span class="attr">IPADDR</span>=<span class="number">192.168</span>.<span class="number">49.128</span>		(IP地址，前三段与网关相同，第四段写<span class="number">128</span>即可)</span><br><span class="line"><span class="attr">DNS1</span>=<span class="number">192.168</span>.<span class="number">43.1</span>			(DNS服务器)</span><br></pre></td></tr></table></figure>
 <p>​    按下<code>Esc</code>键，输入<code>:x</code>(保存并退出)<br>    终端下键入命令<code>service network restart</code></p>
-<ol>
-<li><p>Cenos更换中文输入法</p>
+<ul>
+<li>Cenos更换中文输入法</li>
+</ul>
 <p>依次click<code>设置</code>，<code>区域和语言</code>，<code>左下方的小+号</code>，在弹出的列表里面选择<code>汉语(中国)</code>，<code>汉语(Intelligent Pinyin)</code>，添加。<br><img src="https://i.imgur.com/AvjScbS.png" alt=""><br>如图选择<code>汉语(Intelligent Pinyin)</code>启用输入法，按<code>shift</code>键可以进行中英文切换。</p>
-</li>
-<li><p>github源码安装软件</p>
-</li>
-</ol>
+<ul>
+<li>github源码安装软件</li>
+</ul>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">URL</span></span><br><span class="line">chmod +x configure</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-<ol>
+<ul>
 <li>vim，notepad++出现如下情况，<strong>禁用以管理员身份运行此程序</strong>即可</li>
-</ol>
+</ul>
 <p><img src="https://i.imgur.com/lV6Dgbo.png" alt=""><br><img src="https://i.imgur.com/Ui5bLg1.png" alt=""></p>
-<ol>
-<li><p>电脑wifi模块不见了？不要慌，如图，打开设备管理器</p>
+<ul>
+<li>电脑wifi模块不见了？不要慌，如图，打开设备管理器</li>
+</ul>
 <p><img src="https://i.imgur.com/rQTyILy.png" alt=""><br>click<code>网络适配器</code>，发现有问题的适配器，先试着重启，若是不行重新下载驱动即可。</p>
-</li>
+<ol>
 <li><p>Kali Linux可以通过<code>xrandr</code>命令强制永久修改分辨率，具体操作请移步<a href="https://www.baidu.com/" target="_blank" rel="noopener">◎◎◎</a><br>vim终极配置<a href="http://geek.csdn.net/news/detail/34295" target="_blank" rel="noopener">①</a>    <a href="https://www.cnblogs.com/highway-9/p/5984285.html" target="_blank" rel="noopener">②</a></p>
 </li>
 <li><p>yum提示<code>Another app is currently holding the yum lock; waiting for it to exit...</code></p>
@@ -224,39 +225,38 @@
 </li>
 </ol>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">rm</span> -f /<span class="keyword">var</span>/<span class="keyword">run</span>/yum.pid</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>i += 2，正确的读法应该是“把i增加2”。</p>
-</li>
-<li><p>Code::blocks输出中文乱码，设置步骤如下：设置 -&gt; 编译器 -&gt; other compiler options，写入下面的信息:</p>
+<ul>
+<li>i += 2，正确的读法应该是“把i增加2”。</li>
+<li>Code::blocks输出中文乱码，设置步骤如下：设置 -&gt; 编译器 -&gt; other compiler options，写入下面的信息:</li>
+</ul>
 <p>-finput-charset=UTF-8<br>-fexec-charset=GBK<br><img src="https://i.imgur.com/4X1Igf2.png" alt=""></p>
-</li>
-<li><p><a href="https://jingyan.baidu.com/article/ca2d939d3263daeb6c31ce9c.html" target="_blank" rel="noopener">GIF动态图片怎么逐帧把图片保存</a></p>
-</li>
-<li><p>超长文件夹删除，如图：</p>
+<ul>
+<li><a href="https://jingyan.baidu.com/article/ca2d939d3263daeb6c31ce9c.html" target="_blank" rel="noopener">GIF动态图片怎么逐帧把图片保存</a></li>
+<li>超长文件夹删除，如图：</li>
+</ul>
 <p><img src="https://i.imgur.com/I8sYjHP.png" alt=""><br>命令行下输入：</p>
-</li>
-</ol>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Robocopy</span> /<span class="selector-tag">MIR</span> <span class="selector-tag">storepath</span>(一个空文件夹绝对路径) <span class="selector-tag">longlongpath</span>(超长文件夹绝对路径)</span><br></pre></td></tr></table></figure>
-<ol>
+<ul>
 <li>MarkdownPad实时预览字体样式及大小：</li>
-</ol>
+</ul>
 <p>工具 -&gt; 选项 -&gt; 样式表 -&gt; 编辑:</p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">body </span>&#123;</span><br><span class="line">  font-family: KaiTi(楷体), arial, freesans, clean, sans-serif<span class="comment">;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="symbol">  zoom:</span> <span class="number">2</span>(放大<span class="number">2</span>倍)<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>如何用手机接收电脑发来的 <strong>文件夹</strong></li>
-</ol>
 <ul>
-<li>用数据线直接连接到电脑</li>
+<li><p>如何用手机接收电脑发来的 <strong>文件夹</strong></p>
+</li>
+<li><p>用数据线直接连接到电脑</p>
+</li>
 <li>用电脑将文佳夹上传至腾讯微云或者百度网盘，再用手机下载下来</li>
 <li>将文件夹制作成压缩文件用QQ/TIM发送至手机</li>
-</ul>
-<ol>
 <li>github如何添加第n(n &gt; 1)个ssh key </li>
-</ol>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">   ssh-keygen -t rsa -C <span class="string">"你的邮箱"</span> -f ~/.ssh/calculator(备注：此处calculator为我在本地ssh密钥的名字)</span><br><span class="line">   </span><br><span class="line">true[ 编辑.shh文件夹下的config文件，没有的话创建一个]</span><br><span class="line">true[ Host github.calculator(第一个小数点前不用改)</span><br><span class="line">true  HostName https://github.com/yhklsdf666/calculator.git(git仓库地址)</span><br><span class="line">true  <span class="keyword">User</span> git(不用改)</span><br><span class="line">true  IdentityFile ~/.ssh/calculator](第一个反斜杠前不用改)</span><br><span class="line"></span><br><span class="line">ssh-agent bash</span><br><span class="line"></span><br><span class="line">ssh-<span class="keyword">add</span><span class="bash"> ~/.ssh/calculator</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">ssh-add -l</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">附：可以通过ssh-add -D来清空私钥</span></span><br></pre></td></tr></table></figure>
-<ol>
+</ul>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">   ssh-keygen -t rsa -C <span class="string">"你的邮箱"</span> -f ~/.ssh/calculator(备注：此处calculator为我在本地ssh密钥的名字)</span><br><span class="line">   </span><br><span class="line">true[ 编辑.shh文件夹下的config文件，没有的话创建一个]</span><br><span class="line">true[ Host github.calculator(第一个小数点前不用改)</span><br><span class="line">true  HostName https://github.com/yhklsdf666/calculator.git(git仓库地址)</span><br><span class="line">true  <span class="keyword">User</span> git(不用改)</span><br><span class="line">true  IdentityFile ~/.ssh/calculator](第一个反斜杠前不用改)</span><br><span class="line"></span><br><span class="line">ssh-agent bash</span><br><span class="line"></span><br><span class="line">ssh-<span class="keyword">add</span><span class="bash"> ~/.ssh/all</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">ssh-add -l</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">附：可以通过ssh-add -D来清空私钥</span></span><br></pre></td></tr></table></figure>
+<ul>
 <li><a href="https://www.cnblogs.com/linfenghp/p/7808408.html" target="_blank" rel="noopener">Android Studio 配置模拟器AVD存放路径(默认在c盘)</a></li>
-</ol>
+<li><a href="www.660660.top/IOfficial/modules/picturecompress/index.jsp">图片压缩</a></li>
+<li><a href="https://blog.csdn.net/ld6813655/article/details/70460790" target="_blank" rel="noopener">应用程序图标丢失快捷方式没有图标怎么办</a></li>
+<li></li>
+</ul>
 
       
 

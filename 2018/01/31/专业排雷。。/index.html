@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://i.imgur.com/rQTyILy.png">
 <meta property="og:image" content="https://i.imgur.com/4X1Igf2.png">
 <meta property="og:image" content="https://i.imgur.com/I8sYjHP.png">
-<meta property="og:updated_time" content="2018-08-29T04:24:33.519Z">
+<meta property="og:updated_time" content="2018-09-24T06:35:52.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="专业排雷。。">
 <meta name="twitter:image" content="https://i.imgur.com/kGKY4ld.png">
@@ -200,8 +200,9 @@
 </ul>
 <p>打开VMware，依次click<code>编辑</code>，<code>虚拟网络编辑器</code>，<code>NAT模式</code>，<code>NAT设置</code>，用纸笔，记下<strong>子网IP</strong>，<strong>子网掩码</strong>，<strong>网关IP</strong>。<img src="https://i.imgur.com/o3wRkjv.png" alt=""><br>命令行下键入<code>ipconfig/all</code>命令查看主机所连网络的<strong>DNS服务器及MAC(物理)地址</strong>，同样用纸笔记录下来。<br>打开Linux终端，root用户下键入<code>vi /etc/sysconfig/network-scripts/ifcfg-ens33</code>，</p>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ONBOOT</span>=<span class="literal">yes</span>					//将最后这里改为<span class="literal">yes</span>并在其后添加配置：</span><br><span class="line"><span class="attr">HWADDR</span>=<span class="number">00</span>:<span class="number">0</span>c:<span class="number">29</span>:<span class="number">91</span>:d7:<span class="number">00</span>		(MAC地址)</span><br><span class="line"><span class="attr">NETMASK</span>=<span class="number">255.255</span>.<span class="number">255.0</span>		(子网掩码)</span><br><span class="line"><span class="attr">NETWORK</span>=<span class="number">192.168</span>.<span class="number">49.0</span>			(子网IP)</span><br><span class="line"><span class="attr">GATEWAY</span>=<span class="number">192.168</span>.<span class="number">49.2</span>			(网关IP)</span><br><span class="line"><span class="attr">IPADDR</span>=<span class="number">192.168</span>.<span class="number">49.128</span>		(IP地址，前三段与网关相同，第四段写<span class="number">128</span>即可)</span><br><span class="line"><span class="attr">DNS1</span>=<span class="number">192.168</span>.<span class="number">43.1</span>			(DNS服务器)</span><br></pre></td></tr></table></figure>
-<p>​    按下<code>Esc</code>键，输入<code>:x</code>(保存并退出)<br>    终端下键入命令<code>service network restart</code></p>
-<ul>
+<pre><code>按下`Esc`键，输入`:x`(保存并退出)
+终端下键入命令` service network restart`
+</code></pre><ul>
 <li>Cenos更换中文输入法</li>
 </ul>
 <p>依次click<code>设置</code>，<code>区域和语言</code>，<code>左下方的小+号</code>，在弹出的列表里面选择<code>汉语(中国)</code>，<code>汉语(Intelligent Pinyin)</code>，添加。<br><img src="https://i.imgur.com/AvjScbS.png" alt=""><br>如图选择<code>汉语(Intelligent Pinyin)</code>启用输入法，按<code>shift</code>键可以进行中英文切换。</p>
@@ -258,6 +259,12 @@
 <li><a href="http://download.mcafee.com/products/licensed/cust_support_patches/MCPR.exe" target="_blank" rel="noopener">迈克菲杀软卸载</a></li>
 <li>电饼铛(cheng)</li>
 <li>资源监视器</li>
+<li><code>sc delete &quot;服务名&quot;</code>    命令删除windows服务项</li>
+<li><a href="https://blog.csdn.net/u013235478/article/details/50623693" target="_blank" rel="noopener">Windows上安装MySQL</a></li>
+<li><a href="https://blog.csdn.net/pingfangx/article/details/78405006" target="_blank" rel="noopener">Android Studio汉化</a></li>
+<li><a href="https://blog.csdn.net/Rory_Zhong/article/details/78650138" target="_blank" rel="noopener">导入别人的android studio项目</a></li>
+<li><a href="C:\Users\Thinkad\AppData\Local\Android\Sdk" target="_blank" rel="noopener">Android Studio默认安装过程中的一些路径</a></li>
+<li></li>
 </ul>
 
       

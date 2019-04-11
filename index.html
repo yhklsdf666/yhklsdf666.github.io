@@ -81,6 +81,8 @@
 		<nav class="header-nav">
 			<div class="social">
 				
+					<a class="github" target="_blank" href="https://github.com/yhklsdf666" title="github"><i class="icon-github"></i></a>
+		        
 					<a class="mail" target="_blank" href="mailto:1991987275@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 					<a class="twitter" target="_blank" href="#" title="twitter"><i class="icon-twitter"></i></a>
@@ -125,6 +127,8 @@
 			<nav class="header-nav">
 				<div class="social">
 					
+						<a class="github" target="_blank" href="https://github.com/yhklsdf666" title="github"><i class="icon-github"></i></a>
+			        
 						<a class="mail" target="_blank" href="mailto:1991987275@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 						<a class="twitter" target="_blank" href="#" title="twitter"><i class="icon-twitter"></i></a>
@@ -154,6 +158,73 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-简易外挂原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>打开c语言编译环境（以Codeblocks为例），编写代码并运行程序。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">true<span class="keyword">int</span> gold = <span class="number">700</span>;</span><br><span class="line">true<span class="built_in">printf</span>(<span class="string">"%x\n"</span>, &amp;gold);</span><br><span class="line">true<span class="keyword">while</span> (gold &gt; <span class="number">0</span>) &#123;</span><br><span class="line">truetrue<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, gold--);</span><br><span class="line">truetrueSleep(<span class="number">1000</span>);</span><br><span class="line">true&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="https://i.imgur.com/LOAesgK.png" alt=""></p>
+<ol>
+<li><a href="https://blog.csdn.net/wangwei_cq/article/details/8187576" target="_blank" rel="noopener">Codeblocks创建DLL动态链接库</a></li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> SIMPLE_H_INCLUDED</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIMPLE_H_INCLUDED</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> BUILD_DLL</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DLL_EXPORT __declspec(dllexport)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DLL_EXPORT __declspec(dllimport)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> DLL_EXPORT <span class="title">go</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">// SIMPLE_H_INCLUDED</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"head.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">go</span><span class="params">()</span> </span>&#123;</span><br><span class="line">true<span class="keyword">int</span> *ptr = <span class="number">0xd9fa04</span>;</span><br><span class="line">true*ptr = <span class="number">99999</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>用<a href="https://pan.baidu.com/s/127tojPw4IlL3QZJuCXqJmA" target="_blank" rel="noopener">DLL注入工具</a>将编写好的动态链接库注入到目标应用程序进程中</p>
+<p><img src="https://i.imgur.com/oBgeb64.png" alt=""></p>
+<ol>
+<li>成功修改游戏数据！</li>
+</ol>
+</li>
+</ol>
+<p><img src="https://i.imgur.com/HM38R8n.png" alt=""></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/08/简易外挂原理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-掌握高精尖的情报获取能力" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -857,83 +928,10 @@
 
 
   
-    <article id="post-Markdown初体验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/07/Markdown初体验/">MarkDown初体验</a>
-    </h1>
-  
-
-        
-        <a href="/2018/01/07/Markdown初体验/" class="archive-article-date">
-  	<time datetime="2018-01-07T07:41:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-07</time>
-</a>
-					  	  
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://i.imgur.com/ocUiuAB.png" alt=""><br>
-        
-          <a class="article-more-a" href="/2018/01/07/Markdown初体验/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/01/07/Markdown初体验/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 

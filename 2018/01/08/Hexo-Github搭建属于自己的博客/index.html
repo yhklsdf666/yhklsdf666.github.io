@@ -98,7 +98,7 @@
 		        
 			</div>
 			
-			<!--音乐播放插件-->/outchain/2/2922874/
+			<!--音乐播放插件-->
 			<div style="margin-top:30px;">
 			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=240 height=52 src="//music.163.com/outchain/player?type=2&id=4352174&auto=0&height=32"></iframe>
 			</div>
@@ -214,7 +214,7 @@
 <p>&emsp;&emsp;连续3个回车，最后得到了两个文件：id_rsa和id_rsa.pub。<br>&emsp;&emsp;找到<strong>id_rsa.pub</strong>文件，我的电脑是在<code>C:\Users\Thinkad\.ssh</code>文件夹下，（这里推荐一款软件：<a href="https://www.voidtools.com/" target="_blank" rel="noopener">Everything</a>。Everything是目前速度最快的文件搜索软件，可以瞬间搜索到你需要的文件）。找到后用记事本工具打开该文件，(这里推荐<a href="https://notepad-plus-plus.org/download/v7.5.4.html" target="_blank" rel="noopener">Notepad++</a>)将其中内容复制下来。<br>&emsp;&emsp;登录Github，进入你刚才创建的代码库，进入页面右上方<code>Settings</code>，点击<code>Deploy keys</code>(部署秘钥)，点击<code>Add deploy key</code><br><img src="https://i.imgur.com/2g5TznQ.png" alt=""><br>&emsp;&emsp;将刚才复制的内容粘贴进<code>key</code>下的白框内，其中<code>Title</code>选填，<code>Allow write access</code>前打上对勾，然后点击<code>Add key</code>。</p>
 <p>10)&emsp;<strong>配置Deployment</strong>:<br> 打开<code>C:\hexo</code>文件夹中的<code>_config.yml</code>文件，然后按照如下格式修改：<br><img src="https://i.imgur.com/aPJizAL.png" alt=""><br>&emsp;&emsp;<strong>注意：冒号后边有一个空格。</strong></p>
 <p>11)&emsp;<strong>写博客，发布文章</strong>：<br>&emsp;&emsp;打开Git Bash，输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\hexo</span><br><span class="line">hexo n <span class="string">"文章名"</span></span><br></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;这时候在我的 电脑的目录下<code>C:\hexo\source\_posts</code>将会看到<code>文章名.md</code>文件,用<a href="http://www.markdownpad.com/download.html" target="_blank" rel="noopener">MarDown编辑器</a>打开就可以编辑文章了。文章编辑好之后，运行生成、部署命令：<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g    <span class="comment">//生成</span></span><br><span class="line">hexo d    <span class="comment">//部署</span></span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这时候在我的 电脑的目录下<code>C:\hexo\source\_posts</code>将会看到<code>文章名.md</code>文件,用<a href="http://www.markdownpad.com/download.html" target="_blank" rel="noopener">MarDown编辑器</a>打开就可以编辑文章了。文章编辑好之后，运行生成、部署命令：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g    <span class="comment">//生成</span></span><br><span class="line">hexo d    <span class="comment">//部署</span></span><br></pre></td></tr></table></figure></p>
 <p>&emsp;&emsp;其中<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo g</span></span><br><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure></p>
 <p>&emsp;&emsp;也可用一条命令<code>hexo d -g</code>(在部署前先生成)代替，相当于上面两条命令的效果。若是提醒<code>deloyer not found:git</code>，则需执行<code>npm install hexo-deployer-git --save</code>命令来提前安装一个扩展。<br>&emsp;&emsp;部署成功后访问你的地址：<strong><a href="https://你的Github用户名.github.io" target="_blank" rel="noopener">https://你的Github用户名.github.io</a></strong>将可以看到你刚刚发表的文章。</p>
 <p><strong><a href="http://m.blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="noopener">参考文章</a></strong></p>
@@ -493,11 +493,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+                <a href="javascript:void(0)" class="js-tag color2">恍然大悟系列</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -505,19 +509,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构与算法分析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">电影</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">音乐</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构与算法分析</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">恍然大悟系列</a>
+                <a href="javascript:void(0)" class="js-tag color3">音乐</a>
               </li>
              
               <li class="article-tag-list-item">
